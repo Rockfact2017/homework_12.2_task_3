@@ -12,10 +12,13 @@ def get(array, index, default=None):
     :return: значение по индексу или значение по-умолчанию.
     """
 
+
     if 0 <= index < len(array):
         return array[index]
     return default
 
+
+  
 
 def my_slice(coll, start=None, end=None):
     """
@@ -44,4 +47,3 @@ def my_slice(coll, start=None, end=None):
         normalized_end = end
 
     return coll[normalized_start:normalized_end]
-
