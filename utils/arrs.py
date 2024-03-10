@@ -13,10 +13,12 @@ def get(array, index, default=None):
     """
 
 
-    if 0 <= index < len(array) or -len(array) <= index < 0:
+    if 0 <= index < len(array):
         return array[index]
     return default
 
+
+  
 
 def my_slice(coll, start=None, end=None):
     """
@@ -43,8 +45,5 @@ def my_slice(coll, start=None, end=None):
         normalized_end = length
     else:
         normalized_end = end
-
-    if start > end:
-        start, end = end, start
 
     return coll[normalized_start:normalized_end]
